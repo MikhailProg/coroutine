@@ -1,6 +1,6 @@
 # coroutine
 
-A small coroutine library (based on sigaltstack(2)).
+A small coroutine library (based on sigaltstack(2)). There are two primitives to control coroutine execution -- resume and yield.
 
 ## Build
 
