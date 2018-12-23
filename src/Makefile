@@ -2,7 +2,7 @@ CFLAGS  := -pipe -Wall -Wextra -D_FORTIFY_SOURCE=0
 LDFLAGS := -L.
 LDLIBS  := -lcoro
 OS      := $(shell uname -s)
-TARGET  := sample
+TARGET  := pipe fib
 
 .PHONY: all clean
 
@@ -25,8 +25,11 @@ all: $(TARGET)
 coroutine.o: coroutine.c coroutine.h
 libcoro.a: libcoro.a(coroutine.o)
 
-sample.o: sample.c libcoro.a
-sample:
+pipe.o: pipe.c libcoro.a
+pipe:
+
+fib.o: fib.c libcoro.a
+fib:
 
 clean:
 	rm -f *.[oa] $(TARGET)
