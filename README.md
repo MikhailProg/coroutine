@@ -8,7 +8,7 @@ A small coroutine library (based on sigaltstack(2)). There are two primitives to
 $ make -C src
 ```
 
-## Run pipe sample
+## Run samples
 
 ```
 $ ./src/pipe
